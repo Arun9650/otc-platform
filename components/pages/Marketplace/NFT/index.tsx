@@ -1,8 +1,12 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { walletAddressShortn } from "@/lib/action";
 import React, { useEffect } from "react";
+import { useAccount } from "wagmi";
 
 export default function NFTMarket() {
+  const {address} = useAccount();
 
   return (
     <div className="flex flex-col gap-6">
